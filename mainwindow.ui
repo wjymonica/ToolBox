@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>759</width>
+    <height>374</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ToolBox</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pmd">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>pmd</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>310</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>quit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AStyle">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>140</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>AStyle</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cppCheck">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>200</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cppCheck</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>source</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="locationLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>100</y>
+      <width>451</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="typeLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>180</y>
+      <width>451</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>--style=allman --indent=spaces=4 --indent-switches --indent-continuation=1 --indent-preproc-define --indent-col1-comments --min-conditional-indent=0 --pad-header --unpad-paren --align-pointer=type --break-one-line-headers --add-brackets --convert-tabs --max-instatement-indent=80</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>180</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>default parameter</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="outLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>721</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>quit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>47</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pmd</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pmd_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>47</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>163</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AStyle</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>AStyle_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>47</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>163</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cppCheck</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>cppCheck_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>21</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>123</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>pmd_clicked()</slot>
+  <slot>cppCheck_clicked()</slot>
+  <slot>on_AStyle_clicked()</slot>
+ </slots>
+</ui>
